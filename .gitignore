@@ -1,0 +1,11 @@
+/testFiles/
+# Ignore all hidden directories in the root folder
+/.vs
+/.vscode
+/.obsidian
+/.idea
+
+# But keep essential Git files and folders
+!/.gitignore
+!/.gitattributes
+!/.github

@@ -1,0 +1,2 @@
+to remove rear use 
+front % (length of queue) - 1
