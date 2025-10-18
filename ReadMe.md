@@ -1,6 +1,6 @@
 # Main Vault ReadMe
 
-It is recommended that the entirety of the CodeVault be opened as the root directory if viewing from a code editor (this will help avoid directory errors when running Code). 
+It is recommended that the entirety of the CodeVault be opened as the root directory if viewing from a code editor (this will help avoid directory errors when running code and navigation between ReadMe files). 
 This Vault is also designed to work with Obsidian as well. If opening with obsidian (make sure that all code extensions are set to open with a code editor as opening them directly from the vault will cause issues). 
 
 ### Recommended things to have installed:
