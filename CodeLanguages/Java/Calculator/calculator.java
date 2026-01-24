@@ -221,71 +221,43 @@ public class calculator {
 
     // Private addition class for handling addition option
     private static double addition(double addNum1, double addNum2) {
-
-        // Create variable to hold calculated number
-        double addSolve = addNum1 + addNum2;
-
         // Return calculated number to method call
-        return addSolve;
+        return addNum1 + addNum2;
     }
 
     // Private subtraction class for handling subtraction option
     private static double subtraction(double subNum1, double subNum2) {
-
-        // Create variable to hold calculated number
-        double subSolve = subNum1 - subNum2;
-
         // Return calculated number to method call
-        return subSolve;
+        return subNum1 - subNum2;
     }
 
     // Private multiplication class for handling multiplication option
     private static double multiplication(double mulNum1, double mulNum2) {
-
-        // Create variable to hold calculated number
-        double multSolve = mulNum1 * mulNum2;
-
         // Return calculated number to method call
-        return multSolve;
+        return mulNum1 * mulNum2;
     }
 
     // Private division class for handling division option
     private static double division(double divNum1, double divNum2) {
-
-        // Create variable to hold calculated number
-        double divSolve = divNum1 / divNum2;
-
         // Return calculated number to method call
-        return divSolve;
+        return divNum1 / divNum2;
     }
 
     // Private modulus class for handling modulus option
     private static int modulus(int modNum1, int modNum2) {
-
-        // Create variable to hold calculated number
-        int modSolve = modNum1 % modNum2;
-
         // Return calculated number to method call
-        return modSolve;
+        return modNum1 % modNum2;
     }
     
     // Private exponential class for handling exponential option
     private static double exponential(double expNum1, double expNum2) {
-
-        // Create variable to hold calculated number
-        double expSolve = Math.pow(expNum1,expNum2);
-
         // Return calculated number to method call
-        return expSolve;
+        return Math.pow(expNum1,expNum2);
     }
 
     // Private root class for handling root option
     private static double root(double rootNum1, double rootNum2) {
-        
-        // Create variable to hold calculated number
-        double rootSolve = Math.pow(rootNum1, (1/rootNum2));
-        
         // Return calculated number to method call
-        return rootSolve;
+        return Math.pow(rootNum1, (1/rootNum2));
     }
 }
