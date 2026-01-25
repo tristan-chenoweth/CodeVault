@@ -4,3 +4,7 @@ feedparser
 requests
 pydantic
 sqlalchemy
+transformers
+torch
+sentencepiece
+openai
