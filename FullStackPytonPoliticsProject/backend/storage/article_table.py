@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, DateTime, Text, UniqueConstraint
-from app.storage.db import Base
+from backend.storage.db import Base
 
 class ArticleTable(Base):
     __tablename__ = "articles"

@@ -1,8 +1,8 @@
-from app.fetchers.rss import fetch_rss_articles
-from app.filters.politics import is_political
-from app.storage.db import SessionLocal
-from app.storage.article_repository import save_articles, get_recent_articles
-from app.models.article import Article
+from backend.fetchers.rss import fetch_rss_articles
+from backend.filters.politics import is_political
+from backend.storage.db import SessionLocal
+from backend.storage.article_repository import save_articles, get_recent_articles
+from backend.models.article import Article
 
 
 def get_political_articles(limit: int = 100):

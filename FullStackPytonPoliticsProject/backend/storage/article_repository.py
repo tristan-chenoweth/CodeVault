@@ -1,8 +1,8 @@
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError
 
-from app.storage.article_table import ArticleTable
-from app.models.article import Article
+from backend.storage.article_table import ArticleTable
+from backend.models.article import Article
 
 
 def save_articles(db: Session, articles: list[Article]) -> int:

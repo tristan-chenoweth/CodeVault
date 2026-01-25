@@ -1,11 +1,11 @@
 from fastapi import FastAPI
 from typing import List
 
-from app.models.article import Article
-from app.services.aggregator import get_political_articles
+from backend.models.article import Article
+from backend.services.aggregator import get_political_articles
 
-from app.storage.db import engine, Base
-from app.storage.article_table import ArticleTable
+from backend.storage.db import engine, Base
+from backend.storage.article_table import ArticleTable
 
 Base.metadata.create_all(bind=engine)
 
@@ -23,16 +23,16 @@ app = FastAPI(
 # Health & metadata
 # -------------------------------------------------------------------
 
-@app.get("/", tags=["meta"])
+@backend.get("/", tags=["meta"])
 def root():
     return {
         "name": "Political News Aggregator",
         "status": "running",
-        "version": app.version,
+        "version": backend.version,
     }
 
 
-@app.get("/health", tags=["meta"])
+@backend.get("/health", tags=["meta"])
 def health_check():
     return {"status": "ok"}
 
@@ -41,7 +41,7 @@ def health_check():
 # Core API endpoints
 # -------------------------------------------------------------------
 
-@app.get(
+@backend.get(
     "/news",
     response_model=List[Article],
     tags=["news"],
