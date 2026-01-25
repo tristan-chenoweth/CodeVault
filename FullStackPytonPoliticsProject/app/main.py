@@ -4,6 +4,11 @@ from typing import List
 from app.models.article import Article
 from app.services.aggregator import get_political_articles
 
+from app.storage.db import engine, Base
+from app.storage.article_table import ArticleTable
+
+Base.metadata.create_all(bind=engine)
+
 # -------------------------------------------------------------------
 # Application setup
 # -------------------------------------------------------------------
