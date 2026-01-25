@@ -23,16 +23,16 @@ app = FastAPI(
 # Health & metadata
 # -------------------------------------------------------------------
 
-@backend.get("/", tags=["meta"])
+@app.get("/", tags=["meta"])
 def root():
     return {
         "name": "Political News Aggregator",
         "status": "running",
-        "version": backend.version,
+        "version": app.version,
     }
 
 
-@backend.get("/health", tags=["meta"])
+@app.get("/health", tags=["meta"])
 def health_check():
     return {"status": "ok"}
 
@@ -41,7 +41,7 @@ def health_check():
 # Core API endpoints
 # -------------------------------------------------------------------
 
-@backend.get(
+@app.get(
     "/news",
     response_model=List[Article],
     tags=["news"],
