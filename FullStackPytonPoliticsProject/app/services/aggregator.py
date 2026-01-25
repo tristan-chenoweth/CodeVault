@@ -1,7 +1,10 @@
 from app.fetchers.rss import fetch_rss_articles
 from app.filters.politics import is_political
+from app.summarizers.hybrid import HybridSummarizer
 
-def get_political_articles():
+summarizer = HybridSummarizer()
+
+def get_political_articles(with_summary=True):
     raw_articles = fetch_rss_articles()
     political_articles = []
 
@@ -12,7 +15,12 @@ def get_political_articles():
             article.content
         ]))
 
-        if is_political(combined_text):
-            political_articles.append(article)
+        if not is_political(combined_text):
+            continue
+
+        if with_summary:
+            article.summary = summarizer.summarize(combined_text)
+
+        political_articles.append(article)
 
     return political_articles
